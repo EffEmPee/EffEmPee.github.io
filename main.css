@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Roboto Condensed', sans-serif;
+}
+body { 
+  background: #202020;
+  display: grid;
+  align-items: center;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.title  {
+  margin-top: 3%;
+
+  color: #b9b9b9;
+
+  display: grid;
+  justify-content: center;
+}
+
+
+.title h3 {
+  padding-top: 10px;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  width: 350px;
+  max-height: 700px;
+  margin-left: 5%;
+
+  background-color: #292929;
+  border-radius: 40px;
+
+  animation: get-left 0.4s;
+}
+
+.data {
+  display: flow-root;
+
+  color: #c9c9c9;
+  font-size: 18px;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.data .pic {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 35px;
+}
+.pic img {
+  border-radius: 50%;
+  border: solid 4px rgba(204, 204, 204, 0.774);
+  width: 130px;
+  height: 130px;
+}
+
+.data .name {
+  display: grid;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 30px;
+}
+.line {
+  margin: auto;
+  height: 0px;
+  width: 200px;
+
+  border-bottom: solid #b9b9b9;
+}
+.content {
+  margin-top: 50px;
+
+}
+.bio, .location, .repos, .profile {
+  display: flex;
+  padding-top: 20px;
+
+  color: #dbdbdb;
+}
+
+.bioText, .locationName, .loginName, .reposNum {
+  margin-left: 5px;
+  
+  text-decoration: none;
+  color: #c9c9c9;
+}
+
+.loginName:hover, .reposNum:hover {
+  color: rgba(156, 21, 21, 0.842);
+}
+
+.projects {
+  display: grid;
+  justify-content: center;
+  
+
+}
+.projects p {
+  display: flex;
+  justify-content: center;
+
+  text-transform: uppercase;
+  text-decoration: solid;
+
+  color: #c9c9c9;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.projects li {
+  display: grid;
+  justify-content: center;
+  width: 350px;
+  height: 150px;
+
+  background-color: #292929;
+  border-radius: 40px;
+  margin-bottom: 2%;
+  
+
+  animation: get-right 0.4s;
+  transition: 0.3s;
+}
+
+.projects li:hover {
+  border: solid rgba(204, 204, 204, 0.774);
+  background-color: #202020;
+  
+  transform: translateX(+50px);
+  
+  box-shadow: -6px 6px 5px 0px rgba(19, 19, 19, 0.233);
+}
+
+@keyframes get-left {
+  0%{
+    transform: translateX(-50px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes get-right {
+  0%{
+    transform: translateX(+50px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
