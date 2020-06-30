@@ -70,8 +70,11 @@ function renderProjects(){
           var pElement = document.createElement('a');
           linkText(pElement, response.data[i].name);
           nameElement.setAttribute('class', 'project' + i);
-          pElement.setAttribute('href', response.data[i].html_url)
+
+          pElement.setAttribute('href', response.data[i].html_url);
+          pElement.setAttribute('target', '_blank');
           pElement.setAttribute('class', 'title');
+
           nameElement.appendChild(pElement);
           listElement.appendChild(nameElement);
 
